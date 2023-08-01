@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'views/home_page.dart';
+import 'views/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,12 +21,13 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: MyHomePage(),
-      initialRoute: '/',
+      initialRoute: '/loginPage',
       getPages: [
         GetPage(
           name: '/',
           page: () => MyHomePage(),
         ),
+        GetPage(name: '/loginPage', page: () => const LoginPage()),
       ],
     );
   }
